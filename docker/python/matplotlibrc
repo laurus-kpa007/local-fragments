@@ -1,0 +1,19 @@
+# Matplotlib 설정 파일
+# 한글 폰트 자동 설정
+
+# 한글 폰트 사용
+font.family: NanumGothic, DejaVu Sans, sans-serif
+
+# 마이너스 기호 깨짐 방지
+axes.unicode_minus: False
+
+# 기본 폰트 크기
+font.size: 10
+
+# Figure 설정
+figure.figsize: 10, 6
+figure.dpi: 100
+
+# 그리드 스타일
+axes.grid: True
+grid.alpha: 0.3
