@@ -2,7 +2,14 @@
   "permissions": {
     "allow": [
       "Bash(git config:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nInitial commit: Local Fragments - AI Code Generation Platform\n\nFeatures:\n- Multiple code generation templates \\(HTML, Python, Python Chart, JavaScript, Mermaid, Word\\)\n- Real-time streaming code generation with Ollama\n- Chat history with artifact management \\(Claude-style interface\\)\n- Split-screen layout: conversation history \\(left\\) + live preview \\(right\\)\n- Docker-based code execution for Python and Node.js\n- Korean font support in matplotlib charts\n- CSS-only HTML generation to avoid broken images\n- Model selection with localStorage persistence\n- Export to DOCX functionality\n\nTech Stack:\n- Next.js 15 with App Router\n- TypeScript\n- Ollama for local LLM\n- Docker for sandboxed code execution\n- Tailwind CSS\n\nDocumentation included:\n- README.md: Main project documentation\n- EXAMPLE_PROMPTS.md: Sample prompts for each template\n- HTML_IMAGE_GUIDE.md: Guide for avoiding broken images\n- KOREAN_FONT_FIX.md: Korean font setup for charts\n- JAVASCRIPT_LIMITATIONS.md: Node.js built-in modules only guide\n- TESTING.md: Platform-specific testing instructions\n- DOCKER_EXPORT_GUIDE.md: Docker image export/import guide\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git remote add:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(docker tag:*)",
+      "Bash(docker login:*)",
+      "Bash(docker push:*)"
     ]
   }
 }

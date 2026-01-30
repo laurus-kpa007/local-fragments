@@ -60,9 +60,39 @@ npm install
 npm run dev
 ```
 
-### 3. (선택) Docker 샌드박스 이미지 빌드
+### 3. (선택) Docker 샌드박스 이미지 준비
 
 Python/Node.js 코드 실행이 필요한 경우:
+
+#### 옵션 A: GitHub Container Registry에서 다운로드 (권장) ⭐
+
+방화벽 환경이거나 빠른 설정을 원하는 경우:
+
+```bash
+# Windows (PowerShell)
+.\pull-from-ghcr.ps1
+
+# Linux/Mac (Bash)
+bash pull-from-ghcr.sh
+```
+
+또는 수동으로:
+
+```bash
+# 이미지 다운로드
+docker pull ghcr.io/laurus-kpa007/local-fragments-python:latest
+docker pull ghcr.io/laurus-kpa007/local-fragments-node:latest
+
+# 태그 변경
+docker tag ghcr.io/laurus-kpa007/local-fragments-python:latest local-sandbox-python:latest
+docker tag ghcr.io/laurus-kpa007/local-fragments-node:latest local-sandbox-node:latest
+```
+
+자세한 내용: [DOCKER_REGISTRY_GUIDE.md](DOCKER_REGISTRY_GUIDE.md)
+
+#### 옵션 B: 로컬에서 직접 빌드
+
+인터넷 연결이 좋고 커스터마이징이 필요한 경우:
 
 ```bash
 # Python 샌드박스 이미지 빌드 (한글 폰트 포함)
